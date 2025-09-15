@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Página com JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao meu site!</h1>
+    <p>Clique no botão para ver a mensagem.</p>
+    <button id="btnMensagem">Clique aqui</button>
+    <div id="resultado"></div>
+
+    <script>
+        const btn = document.getElementById('btnMensagem');
+        const resultado = document.getElementById('resultado');
+
+        btn.addEventListener('click', () => {
+            const dataAtual = new Date().toLocaleString('pt-BR');
+            resultado.textContent = `Olá! Você clicou no botão em ${dataAtual}.`;
+        });
+    </script>
+</body>
+</html>
+
