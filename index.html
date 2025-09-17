@@ -1,42 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exemplo de Página com JS</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-        button {
-            padding: 10px 15px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        #resultado {
-            margin-top: 20px;
-            font-weight: bold;
-            color: #333;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Bem-vindo ao meu site!</h1>
-    <p>Clique no botão para ver a mensagem.</p>
-    <button id="btnMensagem">Clique aqui</button>
-    <div id="resultado"></div>
 
-    <script>
-        const btn = document.getElementById('btnMensagem');
-        const resultado = document.getElementById('resultado');
+  <div class="container">
+    <h2>Cadastro</h2>
+    <div id="mensagem-erro" class="erro"></div>
+    <form id="formCadastro">
+      <input type="text" id="nome" placeholder="Nome completo" required />
+      <input type="email" id="email" placeholder="E-mail" required />
+      <input type="password" id="senha" placeholder="Senha" required />
+      <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+    <div class="mensagem" id="mensagemSucesso"></div>
+  </div>
 
-        btn.addEventListener('click', () => {
-            const dataAtual = new Date().toLocaleString('pt-BR');
-            resultado.textContent = `Olá! Você clicou no botão em ${dataAtual}.`;
-        });
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
